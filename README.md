@@ -22,7 +22,6 @@
 ## postsテーブル
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
-| type_id            | integer    | null: false                    |
 | genre_id           | integer    | null: false                    |
 | title              | string     | null: false                    |
 | detail             | text       | null: false                    |
