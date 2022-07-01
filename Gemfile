@@ -59,3 +59,6 @@ gem 'devise'
 # 画像投稿
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
+
+# デバッグ
+gem 'pry-rails'

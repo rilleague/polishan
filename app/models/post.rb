@@ -4,8 +4,7 @@ class Post < ApplicationRecord
 
   with_options presence: true do
     validates :title
-    validates :genre_id, numericality: { other_than: 0 }
     validates :detail
-    validates :image
+    validates :images
   end
 end
