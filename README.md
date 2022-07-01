@@ -23,7 +23,7 @@
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
 | title              | string     | null: false                    |
-| genre_id           | integer    | null: false                    |
+| genre              | integer    | null: false                    |
 | detail             | text       | null: false                    |
 | user               | references | null: false, foreign_key: true |
 

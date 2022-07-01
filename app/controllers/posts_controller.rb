@@ -12,10 +12,18 @@ class PostsController < ApplicationController
     end
   end
 
+  def beauty_page
+    @beautyposts = Post.where(genre: 1)
+  end
+
+  def trouble_page
+    @troubleposts = Post.where(genre: 2)
+  end
+
 
   private 
 
   def post_params
-    params.require(:post).permit(:title, :detail, images: []).merge(user_id: current_user.id)
+    params.require(:post).permit(:title, :detail, :genre, images: []).merge(user_id: current_user.id)
   end
 end
