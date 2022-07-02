@@ -1,4 +1,4 @@
-<%= form_with model: @post, local: true do |f|%>
+<%= form_with model: @post_form, url: url, method: method, id: 'new_post', local: true do |f|%>
   <div class="field">
     <%= f.label :title, "タイトル" %><br />
     <%= f.text_field :title, id:"post_title" %>
@@ -18,6 +18,12 @@
     <%= f.label :detail, "投稿内容" %><br />
     <%= f.text_area :detail, class: :form__text, id:"post_detail" %>
   </div>
+
+  <div class="field">
+    <%= f.label :tagname, "タグ(タグ同士の間には半角の「,」を入れてください)", {class:"tag-label"} %><br />
+    <%= f.text_field :tagname, placeholder: "（例）スキンケア,乾燥肌,肌荒れ", :class => "tag-field" %>
+  </div>
+
 
   <div class="actions">
     <%= f.submit "投稿", class: :form__btn  %>
