@@ -52,7 +52,7 @@
 ## tagsテーブル
 | Column             | Type       | Options                         |
 | ------------------ | ---------- | ------------------------------- |
-| name               | string     | null: false                     |
+| tagname            | string     | unique: true                    |
 
 ### association
 - has_many   :posts, through: :post_tags
