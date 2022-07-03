@@ -127,3 +127,12 @@ a {
 .tag-field {
   width: 400px;
 }
+
+/* 投稿内容表示 */
+.post-lists {
+  display: flex;
+}
+
+.post__user {
+  color: red;
+}
