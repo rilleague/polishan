@@ -11,7 +11,7 @@ class PostForm
 
   def save
     post = Post.create(title: title, genre: genre, detail: detail, user_id: user_id ,images: images)
-  
+
     tag = Tag.where(tagname: tagname).first_or_initialize
     tag.save
     
