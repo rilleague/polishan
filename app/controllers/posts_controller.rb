@@ -13,12 +13,12 @@ class PostsController < ApplicationController
     end
   end
 
-  def beauty_page
-    @beautyposts = Post.where(genre: 1)
+  def beautypage
+    @beautypages = Post.where(genre: 1)
   end
 
-  def trouble_page
-    @troubleposts = Post.where(genre: 2)
+  def troublepage
+    @troublepages = Post.where(genre: 2)
   end
 
 
