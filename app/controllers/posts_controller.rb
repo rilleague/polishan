@@ -1,12 +1,12 @@
 class PostsController < ApplicationController
   def new
-    @post_form = PostForm.new
+    @post = Post.new
   end
 
   def create
-    @post_form = PostForm.new(post_form_params)
-    if @post_form.valid?
-      @post_form.save
+    @post = Post.new(post_params)
+    if @post.valid?
+      @post.save
       redirect_to root_path
     else
       render :new
@@ -24,7 +24,7 @@ class PostsController < ApplicationController
 
   private 
 
-  def post_form_params
-    params.require(:post_form).permit(:title, :genre, :detail, :tagname, images: []).merge(user_id: current_user.id)
+  def post_params
+    params.require(:post).permit(:title, :genre, :detail, images: []).merge(user_id: current_user.id)
   end
 end

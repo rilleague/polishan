@@ -62,3 +62,6 @@ gem 'image_processing', '~> 1.2'
 
 # デバッグ
 gem 'pry-rails'
+
+# プルダウン形式
+gem 'active_hash' 
