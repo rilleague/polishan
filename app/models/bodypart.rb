@@ -1,4 +1,4 @@
-class BodyPart < ActiveHash::Base
+class Bodypart < ActiveHash::Base
   self.data = [
     { id: 1, name: '選択して下さい' },
     { id: 2, name: '全身' },
@@ -12,10 +12,10 @@ class BodyPart < ActiveHash::Base
     { id: 10, name: '腹' },
     { id: 11, name: '尻' },
     { id: 12, name: '足' },
-    { id: 13, name: 'その他' },
-]
+    { id: 13, name: 'その他' }
+  ]
 
-  Include ActiveHash::Associations
+  include ActiveHash::Associations
   has_many :posts
-  
+
 end

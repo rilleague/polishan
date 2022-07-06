@@ -5,10 +5,10 @@ class Skin < ActiveHash::Base
     { id: 3, name: 'アトピー肌' },
     { id: 4, name: 'オイリー肌' },
     { id: 5, name: '混合肌' },
-    { id: 6, name: '普通肌' },
-]
+    { id: 6, name: '普通肌' }
+  ]
 
-  Include ActiveHash::Associations
+  include ActiveHash::Associations
   has_many :posts
-  
+
 end

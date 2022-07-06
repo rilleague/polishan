@@ -7,10 +7,9 @@ class Age < ActiveHash::Base
     { id: 5, name: '40代' },
     { id: 6, name: '50代' },
     { id: 7, name: '60代' },
-    { id: 8, name: 'その他' },
-]
+    { id: 8, name: 'その他' }
+  ]
 
-  Include ActiveHash::Associations
+  include ActiveHash::Associations
   has_many :posts
-  
 end
