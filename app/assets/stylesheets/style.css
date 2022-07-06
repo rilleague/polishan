@@ -129,6 +129,10 @@ a {
 }
 
 /* 投稿内容表示 */
+h1{
+  text-align: center;
+}
+
 .post-lists {
   display: flex;
 }
@@ -136,3 +140,4 @@ a {
 .post__user {
   color: red;
 }
+
