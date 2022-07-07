@@ -1,11 +1,8 @@
 <div class='post-contents'>
   <h1 class='title'>美容投稿</h1>
-  <div clss='post-lists'>
+  <div clss='post'>
     <% @beautypages.each do |t| %>
     <div class='post-list'>
-      <div class='post-username'>
-        <%= link_to t.user.nickname, root_path, class: :post__user %>さんの投稿
-      </div>
       <div class='post-img-content'>
         <% t.images.each do |image| %>
           <%= link_to image_tag(image, width:200, class: :post__img), root_path %>
@@ -14,9 +11,7 @@
       <div class='post-title'>
         <%= link_to t.title, root_path, class: :post__title %>
       </div>
-      <div class='post-subtitle'>
-        <span><%= t.age.name %>/<%= t.bodypart.name %></span>
-      </div>
+      <%= link_to t.user.nickname, root_path, class: :post__user %>さん
     </div>
     <% end %>
   </div>
