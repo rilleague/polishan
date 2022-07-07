@@ -55,3 +55,13 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # ユーザー管理機能
 gem 'devise'
+
+# 画像投稿
+gem 'mini_magick'
+gem 'image_processing', '~> 1.2'
+
+# デバッグ
+gem 'pry-rails'
+
+# プルダウン形式
+gem 'active_hash' 

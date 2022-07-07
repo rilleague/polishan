@@ -1,0 +1,48 @@
+<%= form_with model: @post, id: 'new_post', local: true do |f|%>
+  <div class="field">
+    <%= f.label :title, "タイトル" %><br />
+    <%= f.text_field :title, id:"post_title" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :images, "画像" %><br />
+    <p>
+      クリックしてファイルをアップロード
+    </p>
+    <%= f.file_field :images, multiple: true, id:"post_image" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :genre_id, "投稿ジャンル" %><br />
+    <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box"}) %>
+  </div> 
+
+  <div class="field">
+    <%= f.label :detail, "投稿内容" %><br />
+    <%= f.text_area :detail, class: :form__text, id:"post_detail" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age_id, "年齢" %><br />
+    <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"select-box"}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bodypart_id, "部位" %><br />
+    <%= f.collection_select(:bodypart_id, Bodypart.all, :id, :name, {}, {class:"select-box"}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :skin_id, "肌質" %><br />
+    <%= f.collection_select(:skin_id, Skin.all, :id, :name, {}, {class:"select-box"}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :freeword_id, "フリーワード" %><br />
+    <%= f.collection_select(:freeword_id, Freeword.all, :id, :name, {}, {class:"select-box"}) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "投稿", class: :form__btn  %>
+  </div>
+<% end %>

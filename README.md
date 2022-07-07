@@ -22,9 +22,8 @@
 ## postsテーブル
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
-| type_id            | integer    | null: false                    |
-| genre_id           | integer    | null: false                    |
 | title              | string     | null: false                    |
+| genre              | integer    | null: false                    |
 | detail             | text       | null: false                    |
 | user               | references | null: false, foreign_key: true |
 
@@ -53,11 +52,12 @@
 ## tagsテーブル
 | Column             | Type       | Options                         |
 | ------------------ | ---------- | ------------------------------- |
-| name               | string     | null: false                     |
+| tagname            | string     | unique: true                    |
 
 ### association
 - has_many   :posts, through: :post_tags
 - has_many   :post_tags
+
 
 ## post_tagsテーブル
 | Column             | Type       | Options                         |
