@@ -12,13 +12,13 @@ class PostsController < ApplicationController
     end
   end
 
-  # def beautypage
-  #   @beautypages = Post.where(genre_id: 2)
-  # end
+  def beautypage
+    @beautypages = Post.where(genre_id: 2)
+  end
 
-  # def troublepage
-  #   @troublepages = Post.where(genre_id: 3)
-  # end
+  def troublepage
+    @troublepages = Post.where(genre_id: 3)
+  end
 
 
   private 

@@ -131,13 +131,21 @@ a {
 /* 投稿内容表示 */
 h1{
   text-align: center;
+  margin-bottom: 50px;
 }
 
-.post-lists {
-  display: flex;
+.post-list {
 }
 
 .post__user {
-  color: red;
+  font-size: 13px;
+  color: #999;
+  text-align: right;
+  text-decoration: underline;
 }
+
+.post__title {
+  font-size: 22px;
+  font-weight: bold;
+} 
 
